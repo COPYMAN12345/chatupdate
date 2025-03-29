@@ -1,0 +1,358 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container styling */
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Peer ID display styling */
+#peerIdDisplay {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Chat box styling */
+#chatBox {
+    border: 1px solid #ccc;
+    padding: 15px;
+    height: 300px;
+    overflow-y: scroll;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field styling */
+input[type="text"], textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Button container for video call buttons */
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.button-container button {
+    flex: 1;
+    min-width: 120px;
+}
+
+#callButton, #endCallButton {
+    background-color: #28a745;
+}
+
+#callButton:hover, #endCallButton:hover {
+    background-color: #218838;
+}
+
+#muteButton, #pauseVideoButton {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+#muteButton:hover, #pauseVideoButton:hover {
+    background-color: #e0a800;
+}
+
+#clearChatButton {
+    background-color: #6c757d;
+}
+
+#clearChatButton:hover {
+    background-color: #5a6268;
+}
+
+#clearDataButton {
+    background-color: #dc3545;
+}
+
+#clearDataButton:hover {
+    background-color: #c82333;
+}
+
+/* Video container styling */
+#videoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Video element styling */
+video {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Message styling */
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* Local message styling (right-aligned) */
+.local {
+    background-color: #d1e7ff;
+    margin-left: auto;
+    text-align: right;
+}
+
+/* Remote message styling (left-aligned) */
+.remote {
+    background-color: #e2ffe2;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* System message styling (centered) */
+.system {
+    background-color: #00b50f5f;
+    text-align: center;
+}
+
+/* Username styling */
+.username {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #007bff;
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 600px) {
+    #videoContainer {
+        flex-direction: row;
+    }
+
+    video {
+        width: 45%;
+    }
+
+    input[type="text"], textarea {
+        width: calc(50% - 10px);
+    }
+
+    button {
+        width: auto;
+        padding: 10px 20px;
+    }
+}
+/* Add these to the existing styles.css */
+.shared-file, .shared-image, .shared-location {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.shared-file.local, .shared-image.local, .shared-location.local {
+    background-color: #d1e7ff;
+    margin-left: auto;
+    text-align: right;
+}
+
+.shared-file.remote, .shared-image.remote, .shared-location.remote {
+    background-color: #e2ffe2;
+    margin-right: auto;
+    text-align: left;
+}
+
+.download-link, .location-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.download-link:hover, .location-link:hover {
+    text-decoration: underline;
+}
+
+.shared-photo {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#sharedContentContainer {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+/* Update the button container styling to accommodate new buttons */
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-container button {
+    flex: 1;
+    min-width: 120px;
+    max-width: 200px;
+}
+
+#fileShareButton {
+    background-color: #17a2b8;
+}
+
+#photoShareButton {
+    background-color: #6f42c1;
+}
+
+#locationShareButton {
+    background-color: #fd7e14;
+}
+
+#fileShareButton:hover {
+    background-color: #138496;
+}
+
+#photoShareButton:hover {
+    background-color: #5a3d9a;
+}
+
+#locationShareButton:hover {
+    background-color: #e06c10;
+}
+#reconnectButton {
+    background-color: #17a2b8; /* Teal */
+}
+
+#reconnectButton:hover {
+    background-color: #138496; /* Darker teal */
+}
+/* Add these to the existing styles.css */
+#groupControls {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.group-video-container {
+    position: relative;
+    margin: 10px;
+    display: inline-block;
+}
+
+.group-video {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+.video-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.group-member {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#participantList {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+}
+/* Group Call Styles */
+#groupMembersList {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    max-height: 150px;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+#groupIdInput {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+}
